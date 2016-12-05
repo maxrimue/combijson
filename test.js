@@ -1,3 +1,5 @@
+'use strict';
+
 const test = require('ava');
 const combijson = require('./index.js');
 
