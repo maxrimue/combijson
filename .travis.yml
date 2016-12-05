@@ -1,0 +1,10 @@
+language: node_js
+
+os: linux
+
+after_script: npm run coverage
+
+node_js:
+  - 4
+  - 6
+  - 7
