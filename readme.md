@@ -1,5 +1,10 @@
 # combijson [![Build Status](https://travis-ci.org/maxrimue/combijson.svg?branch=master)](https://travis-ci.org/maxrimue/combijson) [![codecov](https://codecov.io/gh/maxrimue/combijson/branch/master/graph/badge.svg)](https://codecov.io/gh/maxrimue/combijson)
 
+```shell
+yarn add combijson # or:
+npm install --save combijson
+```
+
 This module helps you with easy and fast merging of several objects and/or JSON strings:
 
 ```javascript
