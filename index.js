@@ -14,8 +14,8 @@ module.exports = function (objects) {
 	}
 
 	let result = {};
-	function addToArray(value, key) {
-		// Adds value to res array *if not already existing*
+	function addToObject(value, key) {
+		// Adds value to res object *if not already existing*
 		if (result[key] === undefined) {
 			result[key] = value;
 		}
@@ -27,7 +27,7 @@ module.exports = function (objects) {
 	for (const object of objects) {
 		for (const key in object) {
 			if ({}.hasOwnProperty.call(object, key)) {
-				addToArray(object[key], key);
+				addToObject(object[key], key);
 			}
 		}
 	}
