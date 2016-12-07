@@ -34,6 +34,21 @@ test('merges three objects', t => {
 	t.deepEqual(combijson([obj1, obj2, obj3]), obj4);
 });
 
+test('merges nested objects', t => {
+	const obj1 = {hello: {msg: true}};
+	const obj2 = {hello: {msg: false, colour: 'blue'}};
+	const obj3 = {hello: {msg: true, colour: 'blue'}};
+
+	t.deepEqual(combijson([obj1, obj2]), obj3);
+
+	const obj4 = {hello: {}};
+	const obj5 = {hello: {world: {msg: true}}};
+	const obj6 = {hello: {world: {msg: false}}};
+	const obj7 = {hello: {world: {msg: true}}};
+
+	t.deepEqual(combijson([obj4, obj5, obj6]), obj7);
+});
+
 test('merges JSON strings', t => {
 	const obj1 = '{"hello": "world"}';
 	const obj2 = '{"hello": "world"}';

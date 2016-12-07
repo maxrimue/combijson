@@ -20,8 +20,20 @@ const obj4 = {hello: 'world'};
 
 combijson([obj3, obj4]); // {hello: 'there'}
 
+const obj5 = {};
+const obj6 = {hello: {there: true}};
+const obj7 = {hello: {there: false}};
+
+combijson([obj5, obj6, obj7]); // {hello: {there: true}}
+
 ```
 
-`combijson` accepts one array as an argument which holds several objects. The index of each object represent its priority: `combijson` will go over each object starting with the one at index 0, all values of following objects will only be added to the resulting object, so values from 'superior' objects won't be overwritten.
+`combijson` accepts one array as an argument which can hold several objects. The index of each object represents its priority: `combijson` will go over each object starting with the one at index 0, all values of the following objects will only be added to the resulting object, so values from 'superior' objects won't be overwritten.
 
-You can also pass an empty object/no argument at all (`= {}`), meaning you can dynamically create the array argument without additional checks.
+For example, if you want to create a configuration based on a template and user data, you could do:
+```javascript
+const config = combijson([userdata, template]);
+```
+In this case, all user data would be added to the final object, and template keys would only be added if they don't yet exist in the `userdata` object already.
+
+You can also pass an empty object/no argument at all without causing errors. The result would be an empty object.

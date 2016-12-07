@@ -14,22 +14,26 @@ module.exports = function (objects) {
 	}
 
 	let result = {};
-	function addToObject(value, key) {
+	function addToObject(source, target) {
 		// Adds value to res object *if not already existing*
-		if (result[key] === undefined) {
-			result[key] = value;
+		for (const key in source) {
+			if (typeof source[key] === 'object' && !Array.isArray(source[key])) {
+				if (target[key]) {
+					addToObject(source[key], target[key]);
+				} else {
+					Object.assign(target, {[key]: source[key]});
+				}
+			} else {
+				Object.assign(target, {[key]: source[key]});
+			}
 		}
 	}
 
 	// Check out each object and each of its keys,
 	// then add everything we find once to the res array
 	// without overwriting values by superior objects
-	for (const object of objects) {
-		for (const key in object) {
-			if ({}.hasOwnProperty.call(object, key)) {
-				addToObject(object[key], key);
-			}
-		}
+	for (const object of objects.reverse()) {
+		addToObject(object, result);
 	}
 
 	return result;
