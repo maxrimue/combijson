@@ -30,7 +30,7 @@
   "homepage": "https://github.com/maxrimue/combijson#readme",
   "devDependencies": {
     "ava": "^0.18.1",
-    "codecov": "^1.0.1",
+    "codecov": "^2.0.1",
     "nyc": "^10.0.0",
     "xo": "^0.17.1"
   }
