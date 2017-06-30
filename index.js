@@ -13,7 +13,7 @@ module.exports = function (objects) {
 		}
 	}
 
-	let result = {};
+	const result = {};
 	function addToObject(source, target) {
 		// Adds value to res object *if not already existing*
 		for (const key in source) {
