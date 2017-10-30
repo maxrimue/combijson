@@ -2,7 +2,7 @@
   "name": "combijson",
   "version": "1.1.0",
   "description": "Combine objects into a new one",
-  "main": "index.js",
+  "main": "dist/es5/index.js",
   "scripts": {
     "test": "xo && nyc ava",
     "prebuild": "rimraf dist",
