@@ -1,4 +1,4 @@
-# combijson [![Build Status](https://travis-ci.org/maxrimue/combijson.svg?branch=master)](https://travis-ci.org/maxrimue/combijson) [![codecov](https://codecov.io/gh/maxrimue/combijson/branch/master/graph/badge.svg)](https://codecov.io/gh/maxrimue/combijson)
+# combijson [![Build Status](https://travis-ci.org/maxrimue/combijson.svg?branch=master)](https://travis-ci.org/maxrimue/combijson) [![codecov](https://codecov.io/gh/maxrimue/combijson/branch/master/graph/badge.svg)](https://codecov.io/gh/maxrimue/combijson) [![NPM version](https://img.shields.io/npm/v/combijson.svg)](https://www.npmjs.com/package/combijson)
 > This module helps you with easy and fast merging of several objects and/or JSON strings
 
 ## About
@@ -22,7 +22,7 @@ The result would be an empty object.
 
 ## Installation
 
-Try one of the following snippets:  
+Download it using your favourite package managers:  
  + Yarn:  
    ```shell
    yarn add combijson
@@ -31,9 +31,9 @@ Try one of the following snippets:
    ```
    npm install --save combijson
    ```
- + browser: manually download any umd distribution from [repo](/dist/umd/), or try using [rawgit](https://rawgit.com) 
- or [npmcdn](https://unpkg.com/) on your own risk  
-   
+
+Or download any umd distribution from [repo](/dist/umd/). You can also use [rawgit](https://rawgit.com)
+and [npmcdn](https://unpkg.com/) on your own risk.
 
 
 ## Usage  
@@ -43,10 +43,15 @@ Import it if you haven't yet done it:
 var combijson = require('combijson');
 ```
 
-Or if you are using it in browser, include it from local files:  
+If you are using it in browser, include it from local files:  
 ```html
 <script src="path/to/combijson.min.js"></script>
 ```
+
+Or from [npmcdn/combijson/](https://unpkg.com/combijson/):  
+```html
+<script src="https://unpkg.com/combijson@1.1.1/dist/umd/combijson.min.js"></script>
+```  
 
 Have fun!  
 ```javascript
