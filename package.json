@@ -1,10 +1,15 @@
 {
   "name": "combijson",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Combine objects into a new one",
-  "main": "index.js",
+  "main": "dist/es5/index.js",
   "scripts": {
     "test": "xo && nyc ava",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all --parallel build:*",
+    "build:es5": "babel index.js --out-dir dist/es5",
+    "build:umd": "webpack --output-filename combijson.js",
+    "build:umd.min": "webpack --output-filename combijson.min.js -p",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
   },
   "repository": {
@@ -30,8 +35,15 @@
   "homepage": "https://github.com/maxrimue/combijson#readme",
   "devDependencies": {
     "ava": "^0.20.0",
+    "babel-cli": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
     "codecov": "^2.1.0",
+    "npm-run-all": "4.1.1",
     "nyc": "^11.0.3",
+    "rimraf": "2.6.2",
+    "webpack": "3.8.1",
     "xo": "^0.19.0"
   }
 }
