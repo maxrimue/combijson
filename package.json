@@ -29,6 +29,9 @@
 	"homepage": "https://github.com/maxrimue/combijson#readme",
 	"devDependencies": {
 		"ava": "^0.25.0",
-		"xo": "^0.19.0"
+		"xo": "^0.20.3"
+	},
+	"xo": {
+		"prettier": true
 	}
 }
