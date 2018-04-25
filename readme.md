@@ -1,4 +1,4 @@
-# combijson [![Build Status](https://travis-ci.org/maxrimue/combijson.svg?branch=master)](https://travis-ci.org/maxrimue/combijson) [![codecov](https://codecov.io/gh/maxrimue/combijson/branch/master/graph/badge.svg)](https://codecov.io/gh/maxrimue/combijson)
+# combijson [![Build Status](https://travis-ci.org/maxrimue/combijson.svg?branch=master)](https://travis-ci.org/maxrimue/combijson)
 
 ```shell
 yarn add combijson # or:
@@ -25,15 +25,16 @@ const obj6 = {hello: {there: true}};
 const obj7 = {hello: {there: false}};
 
 combijson([obj5, obj6, obj7]); // {hello: {there: true}}
-
 ```
 
 `combijson` accepts one array as an argument which can hold several objects. The index of each object represents its priority: `combijson` will go over each object starting with the one at index 0, all values of the following objects will only be added to the resulting object, so values from 'superior' objects won't be overwritten.
 
 For example, if you want to create a configuration based on a template and user data, you could do:
+
 ```javascript
 const config = combijson([userdata, template]);
 ```
+
 In this case, all user data would be added to the final object, and template keys would only be added if they don't yet exist in the `userdata` object already.
 
 You can also pass an empty object/no argument at all without causing errors. The result would be an empty object.
