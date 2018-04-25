@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (objects) {
+module.exports = function(objects) {
 	if (objects === undefined) {
 		return {};
 	}

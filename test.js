@@ -1,7 +1,7 @@
 'use strict';
 
 const test = require('ava');
-const combijson = require('./index.js');
+const combijson = require('.');
 
 test('handles zero arguments', t => {
 	t.deepEqual(combijson(), {});
@@ -29,7 +29,12 @@ test('merges three objects', t => {
 	const obj1 = {hello: 'test', feeling: 'good'};
 	const obj2 = {hello: 'test', feeling: 'mad', randomText: true};
 	const obj3 = {hello: 'test', randomText: false, turtles: 'rock'};
-	const obj4 = {hello: 'test', feeling: 'good', turtles: 'rock', randomText: true};
+	const obj4 = {
+		hello: 'test',
+		feeling: 'good',
+		turtles: 'rock',
+		randomText: true,
+	};
 
 	t.deepEqual(combijson([obj1, obj2, obj3]), obj4);
 });
