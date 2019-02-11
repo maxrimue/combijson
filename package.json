@@ -1,6 +1,6 @@
 {
 	"name": "combijson",
-	"version": "1.1.1",
+	"version": "2.0.0",
 	"description": "Combine objects into a new one",
 	"main": "index.js",
 	"scripts": {
@@ -21,6 +21,9 @@
 		"objects",
 		"concat"
 	],
+	"engines": {
+		"node": ">=6.0.0"
+	},
 	"author": "Max Rittmüller",
 	"license": "ISC",
 	"bugs": {
