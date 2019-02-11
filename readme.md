@@ -1,4 +1,4 @@
-# combijson [![Build Status](https://travis-ci.org/maxrimue/combijson.svg?branch=master)](https://travis-ci.org/maxrimue/combijson) [![Greenkeeper badge](https://badges.greenkeeper.io/maxrimue/combijson.svg)](https://greenkeeper.io/)
+# combijson [![Build Status](https://travis-ci.com/maxrimue/combijson.svg?branch=master)](https://travis-ci.com/maxrimue/combijson) [![Greenkeeper badge](https://badges.greenkeeper.io/maxrimue/combijson.svg)](https://greenkeeper.io/)
 
 ```shell
 yarn add combijson # or:
