@@ -31,7 +31,7 @@
 	},
 	"homepage": "https://github.com/maxrimue/combijson#readme",
 	"devDependencies": {
-		"ava": "^1.1.0",
+		"ava": "^2.1.0",
 		"xo": "^0.24.0"
 	},
 	"xo": {
