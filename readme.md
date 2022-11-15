@@ -1,5 +1,10 @@
-# combijson [![Build Status](https://travis-ci.com/maxrimue/combijson.svg?branch=master)](https://travis-ci.com/maxrimue/combijson) [![Greenkeeper badge](https://badges.greenkeeper.io/maxrimue/combijson.svg)](https://greenkeeper.io/)
+# combijson
 
+**Note: This package is no longer maintained and deprecated. Please use JavaScript's spread operator instead.**
+  
+  
+<details>  
+  
 ```shell
 yarn add combijson # or:
 npm install --save combijson
@@ -38,3 +43,5 @@ const config = combijson([userdata, template]);
 In this case, all user data would be added to the final object, and template keys would only be added if they don't yet exist in the `userdata` object already.
 
 You can also pass an empty object/no argument at all without causing errors. The result would be an empty object.
+
+</details>  
